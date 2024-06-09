@@ -1,43 +1,72 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Course Registration</title>
-</head>
-<body>
-    <div class="container">
-        <h2>Course Registration</h2>
-        <form id="registrationForm" onsubmit="submitForm(event)">
-            <label for="name">Name:</label>
-            <input type="text" id="name" name="name" required>
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required>
-            <label for="course">Select Course:</label>
-            <select id="course" name="course" required>
-                <option value="">Select</option>
-                <option value="course1">Course 1</option>
-                <option value="course2">Course 2</option>
-                <option value="course3">Course 3</option>
-            </select>
-            <button type="submit">Submit</button>
-        </form>
-        <dialog id="thankYouDialog">
-            <p>Thank you for registering!</p>
-        </dialog>
-    </div>
-
+    <title>Student Registration</title>
     <script>
-        function submitForm(event) {
-            event.preventDefault(); // Prevent the form from submitting and reloading the page
-            
-            // Show the dialog
-            var dialog = document.getElementById('thankYouDialog');
-            dialog.showModal();
-
-            // Optionally, you can reset the form after submission
-            document.getElementById('registrationForm').reset();
+        function submitForm() {
+            // Code to process form data (e.g., send it to a server)
+            // For this example, simply open a new page
+            window.open("success.html", "_blank");
         }
     </script>
+</head>
+<body>
+    <h1>Student Registration Form</h1>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required><br><br>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required><br><br>
+        
+        <label for="dob">Date of Birth:</label>
+        <input type="date" id="dob" name="dob" required><br><br>
+        
+        <label for="gender">Gender:</label>
+        <select id="gender" name="gender" required>
+            <option value="">Select</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+            <option value="other">Other</option>
+        </select><br><br>
+        
+        <label for="course">Course:</label>
+        <select id="course" name="course" required>
+            <option value="">Select</option>
+            <option value="btech">B.Tech</option>
+            <option value="mtech">M.Tech</option>
+            <option value="mba">MBA</option>
+        </select><br><br>
+        
+        <input type="button" value="Submit" onclick="submitForm()">
+    </form>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Successful</title>
+</head>
+<body>
+    <h1>Registration Successful!</h1>
+    <p>Thank you for registering. Your information has been successfully received.</p>
 </body>
 </html>
