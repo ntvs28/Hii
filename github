@@ -1,0 +1,19 @@
+git init
+git status
+git commit -m "first commit"
+git remote add origin https://github.com/username/repo.git
+git branch -M master
+git push -u origin master
+
+
+
+git remote set-url origin https://tokenlink@github/username/repo.git
+git push -u origin master
+
+
+
+
+git branch -M mogh
+git add .
+git commit -m "branching"
+git push --set-upstream origin mogh
