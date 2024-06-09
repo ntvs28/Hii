@@ -1,1 +1,18 @@
-rwfsea
+docker run hello-world
+docker images
+docker pull ubuntu
+docker run -it -d ubuntu
+docker ps -a
+docker exec -it "cont id" bash
+echo hello
+exit
+docker stop "cont id"
+docker commit "cont id" "user id"/ubuntu
+docker images
+docker login
+docker push "user id"/ubuntu
+docker rm "cont id"
+docker ps -a
+docker images
+docker rmi "image id"
+docker images
